@@ -93,3 +93,33 @@ export function getEmptyStateHTML() {
         </div>
     `;
 }
+
+/**
+ * Renders a standard metric card.
+ */
+export function renderMetricCard(title, value, icon, className = '') {
+    return `
+        <div class="stat-card ${className}" style="padding:20px; background:#FFF; border:1px solid #F3F4F6; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div class="stat-icon" style="background:rgba(99,102,241,0.1); color:#6366f1; width:36px; height:36px; font-size:1rem;"><i class="fa-solid ${icon}"></i></div>
+                <div class="stat-details">
+                    <h3 style="margin:0; font-size:0.8rem; color:#6B7280;">${title}</h3>
+                    <h2 style="margin:0; font-size:1.2rem; font-weight:700; color:#111827;">${value}</h2>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Renders a section header.
+ */
+export function renderSectionHeader(title, subtext) {
+    return `
+        <div style="margin-bottom: 24px; border-bottom: 2px solid #F3F4F6; padding-bottom: 12px;">
+            <h2 style="font-size: 1.25rem; font-weight: 800; color: #1E293B; margin: 0 0 4px 0;">${title}</h2>
+            <p style="font-size: 0.875rem; color: #64748B; margin: 0;">${subtext}</p>
+        </div>
+    `;
+}
+

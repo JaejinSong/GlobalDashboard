@@ -519,7 +519,7 @@ export function getServiceAnalysisStats(data) {
         totalCustomers: activeData.length,
         singleServiceCustomers: upscaleTargetsArr.length,
         multiServiceCustomers: activeData.length - upscaleTargetsArr.length,
-        sortedCombos: Object.entries(comboCounts).sort((a, b) => b[1] - a[1]),
+        sortedCombos: Object.entries(comboCounts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])),
         upsellTargets: upscaleTargetsArr.sort((a, b) => b.tcv - a.tcv),
         palette: CONFIG.COLORS
     };
