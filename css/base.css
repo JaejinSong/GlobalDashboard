@@ -1,0 +1,84 @@
+/* base.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* --- Core Background --- */
+    --bg-primary: #F9FAFB;
+    --bg-secondary: #F3F4F6;
+
+    /* --- Card / Surface --- */
+    --card-bg: #FFFFFF;
+    --card-border: #E5E7EB;
+    --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+    --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.1), 0 12px 32px rgba(0, 0, 0, 0.06);
+
+    /* --- Brand Colors (WhaTap) --- */
+    --accent-primary: #007AFF;
+    --accent-primary-light: #EBF4FF;
+    --accent-primary-mid: rgba(0, 122, 255, 0.12);
+    --accent-glow: rgba(0, 122, 255, 0.18);
+
+    --accent-secondary: #34C759;
+    --accent-secondary-light: #EDFAF1;
+    --accent-secondary-mid: rgba(52, 199, 89, 0.12);
+
+    /* --- Supporting Palette --- */
+    --accent-amber: #FF9500;
+    --accent-red: #FF3B30;
+    --accent-purple: #5856D6;
+    --accent-teal: #32ADE6;
+
+    /* --- Text --- */
+    --text-primary: #000000;
+    --text-secondary: #212529;
+    --text-muted: #495057;
+    --text-light: #9CA3AF;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #1C2333;
+    --sidebar-text: #CBD5E1;
+    --sidebar-text-active: #FFFFFF;
+    --sidebar-active-bg: rgba(0, 122, 255, 0.18);
+    --sidebar-active-border: #007AFF;
+    --sidebar-hover-bg: rgba(255, 255, 255, 0.06);
+    --sidebar-border: rgba(255, 255, 255, 0.07);
+
+    /* --- Layout --- */
+    --sidebar-width: 260px;
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}
+
+p {
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }

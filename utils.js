@@ -10,7 +10,8 @@
 export function parseCurrency(val) {
     if (!val) return 0;
     if (typeof val === 'number') return val;
-    const clean = String(val).replace(/[^0-9.-]+/g, '');
+    // Remove commas and other non-numeric characters except for decimal point and minus sign
+    const clean = String(val).replace(/,/g, '').replace(/[^0-9.-]+/g, '');
     return parseFloat(clean) || 0;
 }
 

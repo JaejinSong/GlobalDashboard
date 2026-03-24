@@ -1,0 +1,47 @@
+/* layout.css */
+#dashboard-container {
+    display: none;
+    height: 100vh;
+    grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+#dashboard-container.active {
+    display: grid;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.99); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+#sidebar {
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--sidebar-border);
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.08);
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+.dashboard-scrollable {
+    padding: 28px 32px 120px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.hidden { display: none !important; }

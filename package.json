@@ -1,0 +1,16 @@
+{
+  "name": "globaldashboard",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vitest": "^4.1.1"
+  },
+  "type": "module"
+}
